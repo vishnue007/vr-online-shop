@@ -1,12 +1,23 @@
-import './App.css'
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 function App() {
-
   return (
-    <div className="text-3xl font-bold text-blue-500">
-      Tailwind is working 🚀
-    </div>
-  )
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
