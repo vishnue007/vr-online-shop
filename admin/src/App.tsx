@@ -3,8 +3,8 @@ import './App.css'
 function App() {
 
   return (
-    <div className="App">
-      <h1>Welcome to the VR Online Shop</h1>
+    <div className="text-3xl font-bold text-blue-500">
+      Tailwind is working 🚀
     </div>
   )
 }
